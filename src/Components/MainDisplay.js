@@ -10,13 +10,6 @@ class MainDisplay extends Component {
         this.state = {
 
             key:"rfAWkyD04URIOIitqOAtxhTqQn43",
-            details :{
-                match_type : "One-Day",
-                match_date: "09-03-2021",
-                team1: "MI",
-                team2: "CSK",
-                winning_team: "MI",
-            },
             data:null
         }
     }
