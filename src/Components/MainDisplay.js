@@ -14,19 +14,17 @@ class MainDisplay extends Component {
                 team1: "MI",
                 team2: "CSK",
                 winning_team: "MI",
-        }
-
+            }
         }
     }
     
+    detailBtnHandler = () =>{
 
-    // detailBtnHandler = () =>{
-
-    // }
+    }
     render() {
         return (
             <div>
-                {/* <button onClick={this.detailBtnHandler}>Get Details</button> */}
+                <button className="detailButton" onClick={this.detailBtnHandler}>Get Details</button>
                 <Cards details={this.state.details}/>
                 
             </div>
