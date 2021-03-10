@@ -13,7 +13,9 @@ class MainDisplay extends Component {
             data:null
         }
     }
-    
+    componentDidMount() {
+        document.title = 'CricApp By Niraj';
+      }
     detailBtnHandler = () =>{
             axios.post('https://cricapi.com/api/matches/',{
             apikey : this.state.key
