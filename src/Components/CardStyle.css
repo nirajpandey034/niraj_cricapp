@@ -138,3 +138,12 @@
   }
 
   .hidden { display:none; }
+
+  .knowMore {
+      text-align:end ;
+      color: magenta;
+  }
+
+  .knowMore:hover {
+    cursor: pointer;
+  }

@@ -70,7 +70,8 @@ class Cards1 extends Component {
                     <label className="team1">{this.props.details["team-1"]}</label>
                     <label className="vs">Vs.</label>
                     <label className="team2">{this.props.details["team-2"]}</label><br/>
-                    <label className="result">Result of the Game: <strong>{winning_msg}</strong> </label>
+                    <label className="result">Result of the Game: <strong>{winning_msg}</strong> </label><br /><br />
+                    <label className="knowMore">Click On the Card to Show/Hide the Score</label>
                 </div>
                 {this.state.showCard 
                      ? this.state.data
