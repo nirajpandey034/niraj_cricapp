@@ -1,12 +1,10 @@
 import React from 'react'
 import './CardStyle.css'
-import PopupCard from './PopupCard'
 
 function Cards(props) {
     let date = props.details.date;
     let new_date = date.substring(0,10)
     let winning_msg = ""
-    let match_id = props.details.unique_id
     if(props.details.type === "")
         props.details.type = "---------"
     

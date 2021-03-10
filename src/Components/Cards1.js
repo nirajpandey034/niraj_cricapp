@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import './CardStyle.css'
 import PopupCard from './PopupCard'
+import axios from 'axios'
 class Cards1 extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
              unique_id : this.props.details.unique_id,
-             showCard : false
+             showCard : false,
+             key:"rfAWkyD04URIOIitqOAtxhTqQn43",
+             data : ""
         }
     }
     
@@ -22,6 +25,25 @@ class Cards1 extends Component {
                 showCard : false
             })
         }
+
+        //fetch match score
+        axios.post('https://cricapi.com/api/cricketScore/',{
+            apikey : this.state.key,
+            unique_id : this.props.details.unique_id
+            })
+            // .then(res=>res.json())
+            .then(
+                (result) =>{
+                    let Results = 
+                     <PopupCard  details={result}/>
+                    this.setState({
+                        data:Results
+                    })
+                }
+            )
+            .catch((error)=>{
+                console.log(error)
+            })
     }
     render() {
         let date = this.props.details.date;
@@ -51,7 +73,7 @@ class Cards1 extends Component {
                     <label className="result">Result of the Game: <strong>{winning_msg}</strong> </label>
                 </div>
                 {this.state.showCard 
-                     ? <PopupCard id={this.state.unique_id}/>
+                     ? this.state.data
                      : null
                 }
             </div>

@@ -6,8 +6,7 @@ class PopupCard extends Component {
     render() {
         return (
             <div className="popup">
-                    <h2>{this.props.id}</h2>
-                    
+                    <h2>{this.props.details.data.description}</h2> 
             </div>
         )
     }
