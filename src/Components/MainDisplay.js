@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Cards from "./Cards"
+import Cards1 from "./Cards1"
 import axios from 'axios'
 
 class MainDisplay extends Component {
@@ -22,7 +22,7 @@ class MainDisplay extends Component {
             .then(
                 (result) =>{
                     let Results = result.data.matches.map((results,index) =>
-                     <Cards key={index} details={results}/>)
+                     <Cards1 key={index} details={results}/>)
                     this.setState({
                         data:Results
                     })

@@ -8,14 +8,27 @@
     margin-bottom: 5%;
 }
 
+.CardClass:hover {
+    background-color: orange;
+    cursor: pointer;
+  }
+
 .matchDate {
     margin-left: 45%;
     color: black;
 }
 
+.matchDate:hover {
+    cursor: pointer;
+  }
+
 .matchType {
     color: black;
 }
+
+.matchType:hover {
+    cursor: pointer;
+  }
 
 .team1 {
     /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
@@ -26,13 +39,19 @@
     margin-top: auto;
     margin-bottom: 30%;
 }
-
+.team1:hover {
+    cursor: pointer;
+  }
 .vs {
     margin-left: 3%;
     margin-bottom: 30%;
     color: crimson;
     position: relative;
 }
+
+.vs:hover {
+    cursor: pointer;
+  }
 
 .team2 {
     /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
@@ -44,10 +63,18 @@
     margin-bottom: 30%;
 }
 
+.team2:hover {
+    cursor: pointer;
+  }
+
 .result {
     color: black;
     text-align: left;
 }
+
+.result:hover {
+    cursor: pointer;
+  }
 
 .detailButton {
     background: #3D94F6;
@@ -76,3 +103,38 @@
     margin-bottom: 2%;
     margin-top: 2%;
 }
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background:burlywood;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+  .hidden { display:none; }
